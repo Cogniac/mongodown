@@ -11,7 +11,8 @@
   "dependencies": {
     "abstract-leveldown": "^2.6.0",
     "after-all": "^2.0.0",
-    "mongojs": "^2.4.0"
+    "mongojs": "https://npm-proxy.fury.io/Zew4EeiY1s1M1DiYdi8u/cogniac/~/d/mongojs/mongojs-2.6.0",
+    "test": "^0.6.0"
   },
   "devDependencies": {
     "tap": "^0.5.0"
