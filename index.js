@@ -131,12 +131,12 @@ var MongoIterator = function (db, options) {
   var query = { _id: {} };
   
   // Cogniac: when using dynalite, it handles reverse operations
-  if (options.start) query._id.$lte = options.start;
-  if (options.end)   query._id.$gte = options.end;
-  if (options.gt)    query._id.$lt  = options.gt;
-  if (options.gte)   query._id.$lte = options.gte;
-  if (options.lt)    query._id.$gt  = options.lt;
-  if (options.lte)   query._id.$gte = options.lte;
+  if (options.start) query._id.$gte = options.start;
+  if (options.end)   query._id.$lte = options.end;
+  if (options.gt)    query._id.$gt  = options.gt;           
+  if (options.gte)   query._id.$gte = options.gte;
+  if (options.lt)    query._id.$lt  = options.lt;           
+  if (options.lte)   query._id.$lte = options.lte;                   
 
   if (!Object.keys(query._id).length) delete query._id;
   this._cursor = db._db[db.collection].find(query).sort({ _id: options.reverse ? -1 : 1 });
